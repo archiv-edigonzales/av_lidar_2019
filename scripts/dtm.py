@@ -6,10 +6,10 @@ import os
 import sys
 
 INPATH = "/lidar2019/02_DTM_25cm_TIFF/"
-OUTPATH = "/lidar2019/99_Derivate/dtm/"
+OUTPATH = "/Samsung_T5/99_Derivate/dtm/"
 TMPPATH = "/tmp/"
 
-shp = ogr.Open("/lidar2019/99_Derivate/lidar2019.shp")
+shp = ogr.Open("/vagrant/lidar2019.shp")
 layer = shp.GetLayer(0)
 
 for feature in layer:
@@ -30,3 +30,5 @@ for feature in layer:
     cmd = "gdaladdo -r average " + infile + " 2 4 8 16 32"
     print cmd
     os.system(cmd)
+
+    break
