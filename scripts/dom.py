@@ -6,10 +6,10 @@ import os
 import sys
 
 INPATH = "/lidar2019/03_DOM_25cm_TIFF/"
-OUTPATH = "/lidar2019/99_Derivate/dom/"
+OUTPATH = "/Samsung_T5/99_Derivate/dom/"
 TMPPATH = "/tmp/"
 
-shp = ogr.Open("/lidar2019/99_Derivate/lidar2019.shp")
+shp = ogr.Open("/vagrant/lidar2019.shp")
 layer = shp.GetLayer(0)
 
 for feature in layer:

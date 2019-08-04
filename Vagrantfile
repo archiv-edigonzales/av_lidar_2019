@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
 
-  config.vm.synced_folder "/Volumes/FAG_2TB/", "/lidar2019"
+  config.vm.synced_folder "/Volumes/LiDAR2019/", "/lidar2019", :mount_options => ["ro"]
   config.vm.synced_folder "/Volumes/Samsung_T5/", "/Samsung_T5"
 
   # Provider-specific configuration so you can fine-tune various
@@ -56,7 +56,7 @@ Vagrant.configure("2") do |config|
   #   vb.gui = true
   #
     # Customize the amount of memory on the VM:
-    vb.memory = "12288"
+    vb.memory = "8096"
     vb.cpus = 4
     vb.customize ["modifyvm", :id, "--cableconnected1", "on"]
   end

@@ -10,6 +10,9 @@ Komprimieren mittels `scripts/dtm.py`.
 
 VRT erstellen:
 ```
+cd /lidar2019/99_Derivate/dtm/
+gdal
+
 VRT...
 ```
 

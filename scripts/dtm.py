@@ -30,5 +30,3 @@ for feature in layer:
     cmd = "gdaladdo -r average " + infile + " 2 4 8 16 32"
     print cmd
     os.system(cmd)
-
-    break
