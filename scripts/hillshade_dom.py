@@ -5,11 +5,11 @@ from osgeo import ogr, osr
 import os
 import sys
 
-VRT = "/Samsung_T5/99_Derivate/dtm/dtm.vrt"
+VRT = "/Samsung_T5/99_Derivate/dom/dom.vrt"
 TINDEX = "/vagrant/lidar2019.shp"
-INPATH = "/Samsung_T5/99_Derivate/dtm/"
-OUTPATH = "/Samsung_T5/99_Derivate/dtm_hillshade/"
-TMPPATH = "/tmp/hillshade/dtm/"
+INPATH = "/Samsung_T5/99_Derivate/dom/"
+OUTPATH = "/Samsung_T5/99_Derivate/dom_hillshade/"
+TMPPATH = "/tmp/hillshade/dom/"
 BUFFER = 10
 
 shp = ogr.Open("/vagrant/lidar2019.shp")
@@ -81,3 +81,4 @@ for feature in layer:
     print cmd
     os.system(cmd)
 
+    break
