@@ -6,7 +6,7 @@ gdaltindex lidar2019.shp /lidar2019/02_DTM_25cm_TIFF/*.tif
 Und nach `/lidar2019/99_Derivate/`
 
 ## DTM Processing
-Komprimieren und Overviews mittels `scripts/dtm.py`.
+Komprimieren und Overviews mittels `./scripts/dtm.py`.
 
 VRT erstellen:
 ```
@@ -16,11 +16,11 @@ gdalbuildvrt -addalpha dtm.vrt *.tif
 
 Einzelnes BigTIFF erstellen:
 ```
-
+./scripts/bigtiff_dtm.sh
 ```
 
 ## DOM Processing
-Komprimieren und Overviews mittels `scripts/dom.py`.
+Komprimieren und Overviews mittels `./scripts/dom.py`.
 
 VRT erstellen:
 ```
