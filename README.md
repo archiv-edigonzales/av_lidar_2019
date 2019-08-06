@@ -63,7 +63,10 @@ cd /Samsung_T5/99_Derivate/dtm_slope/
 gdalbuildvrt -addalpha dtm_slope.vrt *.tif
 ```
 
-
+Einzelnes BigTiff erstellen:
+```
+./scripts/bigtiff_dtm_slope.sh
+```
 
 ## DOM Hillshading
 Hillshading der einzelnen Kacheln rechnen:
