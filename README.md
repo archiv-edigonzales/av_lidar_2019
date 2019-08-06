@@ -28,6 +28,56 @@ cd /Samsung_T5/99_Derivate/dom/
 gdalbuildvrt -addalpha dom.vrt *.tif
 ```
 
+Einzelnes BigTIFF erstellen:
+```
+./scripts/bigtiff_dom.sh
+```
+
 
 ## DTM Hillshading
+Hillshading der einzelnen Kacheln rechnen:
+```
+./scripts/hillshade_dtm.py
+```
 
+VRT erstellen:
+```
+cd /Samsung_T5/99_Derivate/dtm_hillshade/
+gdalbuildvrt -addalpha dtm_hillshade.vrt *.tif
+```
+
+Einzelnes BigTiff erstellen:
+```
+./scripts/bigtiff_dtm_hillshade.py
+```
+
+## DTM Slope
+Einzelne Kacheln rechnen:
+```
+./scripts/slope_dtm.py
+```
+
+VRT erstellen:
+```
+cd /Samsung_T5/99_Derivate/dtm_slope/
+gdalbuildvrt -addalpha dtm_slope.vrt *.tif
+```
+
+
+
+## DOM Hillshading
+Hillshading der einzelnen Kacheln rechnen:
+```
+./scripts/hillshade_dom.py
+```
+
+VRT erstellen:
+```
+cd /Samsung_T5/99_Derivate/dom_hillshade/
+gdalbuildvrt -addalpha dom_hillshade.vrt *.tif
+```
+
+Einzelnes BigTiff erstellen:
+```
+./scripts/bigtiff_dom_hillshade.py
+```

@@ -3,7 +3,6 @@
 BASEPATH=/Samsung_T5/99_Derivate/dtm/
 OUTPATH=/Samsung_T5/99_Derivate/tmp/
 
-gdalbuildvrt $OUTPATH/lidar_2018_dtm.vrt $BASEPATH/*0.tif
 gdal_translate $BASEPATH/dtm.vrt $OUTPATH/ch.so.agi.lidar_2019.dtm_tmp.tif -a_srs EPSG:2056 -co 'COMPRESS=DEFLATE' -co 'PREDICTOR=2' -co 'TILED=YES' -co 'BIGTIFF=YES'
 
 gdaladdo --config COMPRESS_OVERVIEW DEFLATE --config PREDICTOR_OVERVIEW 2 -ro -r average $OUTPATH/ch.so.agi.lidar_2019.dtm_tmp.tif 2
