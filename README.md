@@ -84,3 +84,20 @@ Einzelnes BigTiff erstellen:
 ```
 ./scripts/bigtiff_dom_hillshade.py
 ```
+
+## Rasterizing Vegetation
+```
+./scripts/rasterize_vegetation.py
+```
+
+VRT erstellen:
+```
+
+```
+
+Einzelnes BigTiff erstellen:
+```
+
+```
+
+## LAS to LAZ
