@@ -38,5 +38,5 @@ for feature in layer:
     print cmd
     os.system(cmd)
 
-    break
+    #break
 
