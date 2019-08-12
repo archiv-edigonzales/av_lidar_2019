@@ -30,8 +30,8 @@ for feature in layer:
 
     cmd = 'docker run -v /vagrant/scripts:/data -v /lidar2019/01_Punktwolke_LAS:/input -v /Samsung_T5/99_Derivate/laz:/output pdal/pdal pdal pipeline --nostream --readers.las.filename="/input/'+basename+'.las" --writers.las.filename="/output/'+basename+'.laz" /data/las2laz.json'
     print cmd
-    #x = os.system(cmd)
+    x = os.system(cmd)
 
 
-    break
+    #break
 

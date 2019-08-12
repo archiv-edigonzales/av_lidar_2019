@@ -101,6 +101,23 @@ Einzelnes BigTiff erstellen:
 ./scripts/bigtiff_vegetation.sh
 ```
 
+
+## Rasterizing Buildings
+```
+./scripts/rasterize_buildings.py
+```
+
+VRT erstellen:
+```
+cd /Samsung_T5/99_Derivate/buildings/
+gdalbuildvrt -addalpha buildings.vrt *.tif
+```
+
+Einzelnes BigTiff erstellen:
+```
+./scripts/bigtiff_vegetation.sh
+```
+
 ## LAS to LAZ
 ```
 ./scripts/las2laz.py
