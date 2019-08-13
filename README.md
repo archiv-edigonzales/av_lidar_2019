@@ -3,7 +3,7 @@
 ```
 gdaltindex lidar2019.shp /lidar2019/02_DTM_25cm_TIFF/*.tif
 ```
-Und nach `/lidar2019/99_Derivate/`
+Und nach `/lidar2019/99_Derivate/` kopieren.
 
 ## DTM Processing
 Komprimieren und Overviews mittels `./scripts/dtm.py`.
