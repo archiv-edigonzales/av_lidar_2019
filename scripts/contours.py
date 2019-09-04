@@ -68,4 +68,9 @@ for feature in layer:
     print cmd    
     os.system(cmd)
 
+    os.system("rm " + os.path.join(OUTPATH, basename + "_50cm.dbf"))
+    os.system("rm " + os.path.join(OUTPATH, basename + "_50cm.prj"))
+    os.system("rm " + os.path.join(OUTPATH, basename + "_50cm.shp"))
+    os.system("rm " + os.path.join(OUTPATH, basename + "_50cm.shx"))
+
     #break
