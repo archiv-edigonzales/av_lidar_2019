@@ -19,6 +19,9 @@ for feature in layer:
     basename = os.path.splitext(infileName)[0]
     print "**********************: " + infileName
 
+    if os.path.exists(os.path.join(OUTPATH, basename + "_50cm.zip")):
+        continue
+        
     geom = feature.GetGeometryRef()
     env = geom.GetEnvelope()
 
@@ -35,7 +38,7 @@ for feature in layer:
     cmd += " -tr 0.25 0.25 -wo NUM_THREADS=ALL_CPUS -r bilinear "
     cmd += " " + VRT + " " + outfile
     print cmd    
-    os.system(cmd)
+    #os.system(cmd)
 
     infile = os.path.join(TMPPATH, "input.tif")
     outfile = os.path.join(TMPPATH, "output.tif")
@@ -43,15 +46,15 @@ for feature in layer:
     for i in range(10):
         cmd = "gdalwarp -overwrite -s_srs epsg:2056 -t_srs epsg:2056"
         cmd += " -r cubicspline " + infile + " " + outfile
-        os.system(cmd)
-        os.system("cp " + outfile + " " + infile)
+        #os.system(cmd)
+        #os.system("cp " + outfile + " " + infile)
 
     infile = os.path.join(TMPPATH, "input.tif")
     outfile = os.path.join(TMPPATH, "contour_tmp_1.shp")
     cmd = "gdal_contour -b 1 -3d -a elev -i 0.5 " + infile + " " + outfile
     print cmd
-    os.system(cmd)
-    os.system("rm " + infile)
+    #os.system(cmd)
+    #os.system("rm " + infile)
 
     clip = geom.ExportToWkt()
     
@@ -60,17 +63,17 @@ for feature in layer:
 
     cmd = "ogr2ogr -clipsrc '" + clip + "' " + outfile + " " + infile
     print cmd
-    os.system(cmd)
+    #os.system(cmd)
 
     cmd = "cd " + OUTPATH
-    os.system(cmd)
+    #os.system(cmd)
     cmd = "cd " + OUTPATH + " && zip -D " + os.path.join(OUTPATH, basename + "_50cm.zip") + " " + os.path.join(basename + "_50cm.*")
     print cmd    
-    os.system(cmd)
+    #os.system(cmd)
 
     os.system("rm " + os.path.join(OUTPATH, basename + "_50cm.dbf"))
     os.system("rm " + os.path.join(OUTPATH, basename + "_50cm.prj"))
     os.system("rm " + os.path.join(OUTPATH, basename + "_50cm.shp"))
     os.system("rm " + os.path.join(OUTPATH, basename + "_50cm.shx"))
 
-    #break
+    break
