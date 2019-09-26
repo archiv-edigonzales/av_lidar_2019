@@ -75,4 +75,4 @@ for feature in layer:
     os.system("rm " + os.path.join(OUTPATH, basename + "_50cm.shp"))
     os.system("rm " + os.path.join(OUTPATH, basename + "_50cm.shx"))
 
-    break
+    #break

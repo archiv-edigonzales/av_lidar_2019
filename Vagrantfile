@@ -90,10 +90,10 @@ Vagrant.configure("2") do |config|
     apt-get install -y xauth zip
     apt-get install -y ifupdown
     apt-get install -y fonts-liberation
-    echo 'deb     https://qgis.org/ubuntu bionic main' | tee /etc/apt/sources.list.d/qgis.list
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45
-    apt-get update
-    apt-get install -y qgis python-qgis 
+    #echo 'deb     https://qgis.org/ubuntu bionic main' | tee /etc/apt/sources.list.d/qgis.list
+    #apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45
+    #apt-get update
+    #apt-get install -y qgis python-qgis 
     apt-get install -y zip unzip
     SHELL
 end
